@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --main-red: hsl(0, 78%, 62%);
+        --main-cyan: hsl(180, 62%, 55%);
+        --main-orange: hsl(34, 97%, 64%);
+        --main-blue: hsl(212, 86%, 64%);
+
+        --main-heading-color: hsl(234, 12%, 34%);
+        --main-paragraph-color: hsl(229, 6%, 66%);
+        --main-body-background: hsl(0, 0%, 98%);
+      }
+
+      /* Start Grid System */
+      .container {
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+      /* Small Devices */
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      /* Medium Devices */
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      /* Large Devices */
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+      /* End Grid System */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      main {
+        background-color: var(--main-body-background);
+        padding: 50px 0;
+      }
+
+      h1,h2 {
+        color: var(--main-heading-color);
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        color: var(--main-paragraph-color);
+        font-size: 15px;
+        margin: 10px 0 30px;
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+      }
+
+      main .head {
+        width: 50%;
+        margin: 50px auto;
+        text-align: center;
+      }
+
+      main .head span {
+        display: block;
+        font-weight: 200;
+        color: var(--main-paragraph-color);
+      }
+
+      main .feature {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      main .feature .col {
+        width: calc(94% / 3);
+      }
+
+      main .feature .card {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 30px;
+        box-shadow: 0 10px 10px #ddd;
+      }
+
+      main .feature .card.cyan {
+        border-top: 4px solid var(--main-cyan);
+      }
+
+      main .feature .card.red {
+        border-top: 4px solid var(--main-red);
+        margin-bottom: 30px;
+      }
+
+      main .feature .card.orange {
+        border-top: 4px solid var(--main-orange);
+      }
+
+      main .feature .card.blue {
+        border-top: 4px solid var(--main-blue);
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 60px 15px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        main .head {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 70px;
+        }
+        main .feature {
+          display: block;
+        }
+        main .feature .col {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="head">
+          <h1>
+            <span>Reliable, efficient delivery</span> Powered by Technology
+          </h1>
+          <p>
+            Our Artificial Intelligence powered tools use millions of project
+            data points to ensure that your project is successful
+          </p>
+        </div>
+        <div class="feature">
+          <div class="col">
+            <div class="card cyan">
+              <h2>Supervisor</h2>
+              <p>Monitors activity to identify project roadblocks</p>
+              <img src="images/icon-supervisor.svg" alt="Supervisor" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card red">
+              <h2>Team Builder</h2>
+              <p>
+                Scans our talent network to create the optimal team for your
+                project
+              </p>
+              <img src="images/icon-team-builder.svg" alt="Team Builder" />
+            </div>
+            <div class="card orange">
+              <h2>Karma</h2>
+              <p>Regularly evaluates our talent to ensure quality</p>
+              <img src="images/icon-karma.svg" alt="Karma" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card blue">
+              <h2>Calculator</h2>
+              <p>
+                Uses data from past projects to provide better delivery
+                estimates
+              </p>
+              <img src="images/icon-Calculator.svg" alt="Calculator" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.linkedin.com/in/mohamed-shaheen-208718234/" target="_blank"
+          >Mohamed Shaheen</a>.
+      </p>
+    </footer>
+  </body>
+</html>
